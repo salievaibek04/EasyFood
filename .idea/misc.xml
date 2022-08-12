@@ -3,6 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable/bottom_sheet_dialog_shape.xml" value="0.19" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable/content_style.xml" value="0.22" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable/ic_area.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable/ic_category.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable/ic_fav.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable/ic_filled_fav.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable/ic_home.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable/ic_saved.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/drawable/ic_search.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/activity_categories.xml" value="0.2" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/activity_meal_detailes.xml" value="0.2" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.2" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/category_bottom_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/category_card.xml" value="0.2" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/fav_meal_card.xml" value="0.2" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/fragment_category.xml" value="0.2" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/fragment_favorite_meals.xml" value="0.2" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/fragment_search.xml" value="0.2" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/meal_card.xml" value="0.22" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/most_popular_card.xml" value="0.2" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/layout/single_meal_card.xml" value="0.22" />
+        <entry key="..\:/Users/COMPKG/Desktop/EasyFood/app/src/main/res/menu/bottom_nevigation.xml" value="0.2" />
         <entry key="..\:/Users/mo/AndroidStudioProjects/Easyfood/app/src/main/res/drawable/bottom_sheet_dialog_shape.xml" value="0.2" />
         <entry key="..\:/Users/mo/AndroidStudioProjects/Easyfood/app/src/main/res/drawable/category_bottom_fragment.xml" value="0.2703125" />
         <entry key="..\:/Users/mo/AndroidStudioProjects/Easyfood/app/src/main/res/drawable/content_style.xml" value="0.1109375" />

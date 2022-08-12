@@ -1,6 +1,7 @@
 package com.example.easyfood.ui.fragments
 
 import android.content.Intent
+import android.hardware.Camera
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,8 +13,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.ItemTouchHelper
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.easyfood.R
 import com.example.easyfood.adapters.CategoriesRecyclerAdapter
@@ -27,18 +26,20 @@ import com.example.easyfood.mvvm.MainFragMVVM
 import com.example.easyfood.ui.activites.MealActivity
 import com.example.easyfood.ui.MealBottomDialog
 import com.example.easyfood.ui.activites.MealDetailesActivity
-import com.example.easyfood.util.Constants.Companion.CATEGORY_NAME
-import com.example.easyfood.util.Constants.Companion.MEAL_AREA
-import com.example.easyfood.util.Constants.Companion.MEAL_ID
-import com.example.easyfood.util.Constants.Companion.MEAL_NAME
-import com.example.easyfood.util.Constants.Companion.MEAL_STR
-import com.example.easyfood.util.Constants.Companion.MEAL_THUMB
 
 
 class HomeFragment : Fragment() {
     private lateinit var meal: RandomMealResponse
     private lateinit var detailMvvm: DetailsMVVM
     private var randomMealId = ""
+
+    companion object{
+        const val NAME = "package com.example.thegoodfood.fragments.name"
+        const val CATEGORY_NAME = "package com.example.thegoodfood.fragments.categoryName"
+        const val YOUTUBE_URL = "package com.example.thegoodfood.fragments.youtubeUrl"
+        const val AREA_MEAL = "package com.example.thegoodfood.fragments.areameal"
+        const val MEAL_ID = "package com.example.thegoodfood.fragments.mealId"
+    }
 
 
 
@@ -109,9 +110,9 @@ class HomeFragment : Fragment() {
         mostPopularFoodAdapter.setOnClickListener(object : OnItemClick {
             override fun onItemClick(meal: Meal) {
                 val intent = Intent(activity, MealDetailesActivity::class.java)
-                intent.putExtra(MEAL_ID, meal.idMeal)
-                intent.putExtra(MEAL_STR, meal.strMeal)
-                intent.putExtra(MEAL_THUMB, meal.strMealThumb)
+                intent.putExtra(NAME, meal.idMeal)
+                intent.putExtra(CATEGORY_NAME, meal.strMeal)
+                intent.putExtra(YOUTUBE_URL, meal.strMealThumb)
                 startActivity(intent)
             }
 
@@ -139,9 +140,9 @@ class HomeFragment : Fragment() {
                     val bottomSheetFragment = MealBottomDialog()
                     val b = Bundle()
                     b.putString(CATEGORY_NAME, t!![0].strCategory)
-                    b.putString(MEAL_AREA, t[0].strArea)
-                    b.putString(MEAL_NAME, t[0].strMeal)
-                    b.putString(MEAL_THUMB, t[0].strMealThumb)
+                    b.putString(AREA_MEAL, t[0].strArea)
+                    b.putString(NAME, t[0].strMeal)
+                    b.putString(YOUTUBE_URL, t[0].strMealThumb)
                     b.putString(MEAL_ID, t[0].idMeal)
 
                     bottomSheetFragment.arguments = b
@@ -164,8 +165,8 @@ class HomeFragment : Fragment() {
             val temp = meal.meals[0]
             val intent = Intent(activity, MealDetailesActivity::class.java)
             intent.putExtra(MEAL_ID, temp.idMeal)
-            intent.putExtra(MEAL_STR, temp.strMeal)
-            intent.putExtra(MEAL_THUMB, temp.strMealThumb)
+            intent.putExtra(NAME, temp.strMeal)
+            intent.putExtra(YOUTUBE_URL, temp.strMealThumb)
             startActivity(intent)
         }
 

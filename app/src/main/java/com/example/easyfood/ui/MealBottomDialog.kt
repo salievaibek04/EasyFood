@@ -11,12 +11,11 @@ import com.bumptech.glide.Glide
 import com.example.easyfood.R
 import com.example.easyfood.ui.activites.MealDetailesActivity
 import com.example.easyfood.ui.fragments.HomeFragment
-import com.example.easyfood.util.Constants.Companion.CATEGORY_NAME
-import com.example.easyfood.util.Constants.Companion.MEAL_AREA
-import com.example.easyfood.util.Constants.Companion.MEAL_ID
-import com.example.easyfood.util.Constants.Companion.MEAL_NAME
-import com.example.easyfood.util.Constants.Companion.MEAL_STR
-import com.example.easyfood.util.Constants.Companion.MEAL_THUMB
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.AREA_MEAL
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.CATEGORY_NAME
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.MEAL_ID
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.NAME
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.YOUTUBE_URL
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class MealBottomDialog() : BottomSheetDialogFragment() {
@@ -30,11 +29,11 @@ class MealBottomDialog() : BottomSheetDialogFragment() {
         super.onCreate(savedInstanceState)
         setStyle(STYLE_NORMAL,R.style.AppBottomSheetDialogTheme)
         val b = arguments
-        mealName = b!!.getString(MEAL_NAME).toString()
+        mealName = b!!.getString(NAME).toString()
         mealId =b!!.getString(MEAL_ID).toString()
-        mealImg =b!!.getString(MEAL_THUMB).toString()
+        mealImg =b!!.getString(YOUTUBE_URL).toString()
         mealCategory =b!!.getString(CATEGORY_NAME).toString()
-        mealCountry =b!!.getString(MEAL_AREA).toString()
+        mealCountry =b!!.getString(AREA_MEAL).toString()
     }
 
     override fun onCreateView(
@@ -54,8 +53,8 @@ class MealBottomDialog() : BottomSheetDialogFragment() {
         view.setOnClickListener {
             val intent = Intent(context, MealDetailesActivity::class.java)
             intent.putExtra(MEAL_ID,mealId)
-            intent.putExtra(MEAL_STR,mealName)
-            intent.putExtra(MEAL_THUMB,mealImg)
+            intent.putExtra(NAME,mealName)
+            intent.putExtra(YOUTUBE_URL,mealImg)
             startActivity(intent)
         }
 

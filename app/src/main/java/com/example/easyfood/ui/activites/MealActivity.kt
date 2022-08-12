@@ -15,10 +15,10 @@ import com.example.easyfood.adapters.SetOnMealClickListener
 import com.example.easyfood.data.pojo.Meal
 import com.example.easyfood.databinding.ActivityCategoriesBinding
 import com.example.easyfood.mvvm.MealActivityMVVM
-import com.example.easyfood.util.Constants.Companion.CATEGORY_NAME
-import com.example.easyfood.util.Constants.Companion.MEAL_ID
-import com.example.easyfood.util.Constants.Companion.MEAL_STR
-import com.example.easyfood.util.Constants.Companion.MEAL_THUMB
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.CATEGORY_NAME
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.MEAL_ID
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.NAME
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.YOUTUBE_URL
 
 class MealActivity : AppCompatActivity() {
     private lateinit var mealActivityMvvm: MealActivityMVVM
@@ -51,8 +51,8 @@ class MealActivity : AppCompatActivity() {
             override fun setOnClickListener(meal: Meal) {
                 val intent = Intent(applicationContext, MealDetailesActivity::class.java)
                 intent.putExtra(MEAL_ID, meal.idMeal)
-                intent.putExtra(MEAL_STR, meal.strMeal)
-                intent.putExtra(MEAL_THUMB, meal.strMealThumb)
+                intent.putExtra(NAME, meal.strMeal)
+                intent.putExtra(YOUTUBE_URL, meal.strMealThumb)
                 startActivity(intent)
             }
         })

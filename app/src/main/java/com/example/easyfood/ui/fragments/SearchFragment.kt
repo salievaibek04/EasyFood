@@ -15,15 +15,15 @@ import com.example.easyfood.data.pojo.MealDetail
 import com.example.easyfood.databinding.FragmentSearchBinding
 import com.example.easyfood.mvvm.SearchMVVM
 import com.example.easyfood.ui.activites.MealDetailesActivity
-import com.example.easyfood.util.Constants.Companion.MEAL_ID
-import com.example.easyfood.util.Constants.Companion.MEAL_STR
-import com.example.easyfood.util.Constants.Companion.MEAL_THUMB
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.MEAL_ID
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.NAME
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.YOUTUBE_URL
 
 class SearchFragment : Fragment() {
     private lateinit var myAdapter: MealRecyclerAdapter
     private lateinit var binding: FragmentSearchBinding
     private lateinit var searchMvvm: SearchMVVM
-    private var mealId = ""
+    private var mealId = "MEAL_IDD"
     private var mealStr = ""
     private var mealThub = ""
 
@@ -55,8 +55,8 @@ class SearchFragment : Fragment() {
             val intent = Intent(context, MealDetailesActivity::class.java)
 
             intent.putExtra(MEAL_ID, mealId)
-            intent.putExtra(MEAL_STR, mealStr)
-            intent.putExtra(MEAL_THUMB, mealThub)
+            intent.putExtra(NAME, mealStr)
+            intent.putExtra(YOUTUBE_URL, mealThub)
 
             startActivity(intent)
 

@@ -14,17 +14,17 @@ import com.example.easyfood.data.pojo.MealDB
 import com.example.easyfood.data.pojo.MealDetail
 import com.example.easyfood.databinding.ActivityMealDetailesBinding
 import com.example.easyfood.mvvm.DetailsMVVM
-import com.example.easyfood.util.Constants.Companion.MEAL_ID
-import com.example.easyfood.util.Constants.Companion.MEAL_STR
-import com.example.easyfood.util.Constants.Companion.MEAL_THUMB
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.MEAL_ID
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.NAME
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.YOUTUBE_URL
 import com.google.android.material.snackbar.Snackbar
 
 class MealDetailesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMealDetailesBinding
     private lateinit var detailsMVVM: DetailsMVVM
-    private var mealId = ""
-    private var mealStr = ""
-    private var mealThumb = ""
+    private var mealId = "MEAL_ID"
+    private var mealStr = "MEAL_STR"
+    private var mealThumb = "MEAL_THUMB"
     private var ytUrl = ""
     private lateinit var dtMeal:MealDetail
 
@@ -151,8 +151,8 @@ class MealDetailesActivity : AppCompatActivity() {
         val tempIntent = intent
 
         this.mealId = tempIntent.getStringExtra(MEAL_ID)!!
-        this.mealStr = tempIntent.getStringExtra(MEAL_STR)!!
-        this.mealThumb = tempIntent.getStringExtra(MEAL_THUMB)!!
+        this.mealStr = tempIntent.getStringExtra(NAME)!!
+        this.mealThumb = tempIntent.getStringExtra(YOUTUBE_URL)!!
     }
 
 }

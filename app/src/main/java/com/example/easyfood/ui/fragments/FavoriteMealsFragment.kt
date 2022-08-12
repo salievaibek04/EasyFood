@@ -19,12 +19,11 @@ import com.example.easyfood.data.pojo.MealDetail
 import com.example.easyfood.databinding.FragmentFavoriteMealsBinding
 import com.example.easyfood.mvvm.DetailsMVVM
 import com.example.easyfood.ui.activites.MealDetailesActivity
-import com.example.easyfood.util.Constants.Companion.CATEGORY_NAME
-import com.example.easyfood.util.Constants.Companion.MEAL_AREA
-import com.example.easyfood.util.Constants.Companion.MEAL_ID
-import com.example.easyfood.util.Constants.Companion.MEAL_NAME
-import com.example.easyfood.util.Constants.Companion.MEAL_STR
-import com.example.easyfood.util.Constants.Companion.MEAL_THUMB
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.AREA_MEAL
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.CATEGORY_NAME
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.MEAL_ID
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.NAME
+import com.example.easyfood.ui.fragments.HomeFragment.Companion.YOUTUBE_URL
 import com.google.android.material.snackbar.Snackbar
 
 
@@ -107,9 +106,9 @@ class FavoriteMeals : Fragment() {
                 val bottomDialog = MealBottomDialog()
                 val b = Bundle()
                 b.putString(CATEGORY_NAME,t!![0].strCategory)
-                b.putString(MEAL_AREA,t[0].strArea)
-                b.putString(MEAL_NAME,t[0].strMeal)
-                b.putString(MEAL_THUMB,t[0].strMealThumb)
+                b.putString(AREA_MEAL,t[0].strArea)
+                b.putString(NAME,t[0].strMeal)
+                b.putString(YOUTUBE_URL,t[0].strMealThumb)
                 b.putString(MEAL_ID,t[0].idMeal)
                 bottomDialog.arguments = b
                 bottomDialog.show(childFragmentManager,"Favorite bottom dialog")
@@ -129,8 +128,8 @@ class FavoriteMeals : Fragment() {
             override fun onFavoriteClick(meal: MealDB) {
                 val intent = Intent(context, MealDetailesActivity::class.java)
                 intent.putExtra(MEAL_ID,meal.mealId.toString())
-                intent.putExtra(MEAL_STR,meal.mealName)
-                intent.putExtra(MEAL_THUMB,meal.mealThumb)
+                intent.putExtra(NAME,meal.mealName)
+                intent.putExtra(YOUTUBE_URL,meal.mealThumb)
                 startActivity(intent)
             }
 
